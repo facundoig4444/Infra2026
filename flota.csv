@@ -1,0 +1,21 @@
+ID,Categoria,Modelo,Bateria,Disponible
+SCO-001,Scout,FalconEye Mini,85,Si
+SCO-002,Scout,FalconEye Mini,15,Si
+CAR-001,Cargo,SkyHauler X2,98,Si
+CAR-002,Cargo,SkyHauler X2,42,Si
+CAR-003,Cargo,SkyHauler X1,8,Si
+CAR-004,Cargo,SkyHauler X2,76,No
+HEA-001,Heavy,TitanLift 20,60,Si
+HEA-002,Heavy,TitanLift 20,19,Si
+HEA-003,Heavy,TitanLift Pro,90,No
+COO-001,Cooler,FreshWing R1,55,Si
+COO-002,Cooler,FreshWing R1,12,Si
+COO-003,Cooler,FreshWing R2,88,Si
+RAC-001,Racer,BoltStrike V3,99,Si
+RAC-002,Racer,BoltStrike V3,5,Si
+RAC-003,Racer,BoltStrike V2,33,No
+SCO-003,Scout,FalconEye Pro,70,Si
+CAR-005,Cargo,SkyHauler X1,25,Si
+HEA-004,Heavy,TitanLift Pro,3,Si
+COO-004,Cooler,FreshWing R2,64,No
+RAC-004,Racer,BoltStrike V3,18,Si
