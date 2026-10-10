@@ -1,0 +1,20 @@
+# Carpetas de archivos generados
+build/
+bin/
+obj/
+
+# Archivos generados al compilar C y Ada
+*.o
+*.ali
+*.exe
+
+# Archivos temporales y copias del editor
+*.tmp
+*.swp
+*.swo
+*~
+
+# Archivos propios del sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
