@@ -43,8 +43,10 @@ case $ACCION in
         # Dentro de [ ], ">" NO compara: es una redirección de salida. Bash
         # creaba un archivo vacío llamado "20" y el test quedaba [ "5" ], que
         # con un string no vacío siempre da verdadero -> se asignaba cualquier dron.
-        # Solución: usar -gt para hacer una comparación numérica real.
-        if [ "$BATERIA_ACTUAL" -gt "20" ]; then
+        # Solución: usar -ge para hacer una comparación numérica real.
+        # Se usa -ge 20 (acepta exactamente 20%) por coherencia con la definición
+        # de batería crítica (< 20%): solo se rechazan los drones críticos.
+        if [ "$BATERIA_ACTUAL" -ge 20 ]; then
             sed -i "s/^$PARAMETRO,\(.*\),Si$/$PARAMETRO,\1,No/" "$ARCHIVO_FLOTA"
             echo "Dron $PARAMETRO asignado exitosamente."
         else
