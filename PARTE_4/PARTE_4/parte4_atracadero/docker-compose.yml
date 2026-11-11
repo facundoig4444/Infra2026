@@ -1,0 +1,56 @@
+services:
+  coordinador:
+    build:
+      context: .
+      dockerfile: Dockerfile.coordinador
+    container_name: atracadero-coordinador
+    environment:
+      COORDINATOR_PORT: "5000"
+    networks:
+      - puerto-net
+
+  barco1:
+    build:
+      context: .
+      dockerfile: Dockerfile.barco
+    container_name: barco-1
+    environment:
+      BOAT_ID: "1"
+      COORDINATOR_HOST: "coordinador"
+      COORDINATOR_PORT: "5000"
+    depends_on:
+      - coordinador
+    networks:
+      - puerto-net
+
+  barco2:
+    build:
+      context: .
+      dockerfile: Dockerfile.barco
+    container_name: barco-2
+    environment:
+      BOAT_ID: "2"
+      COORDINATOR_HOST: "coordinador"
+      COORDINATOR_PORT: "5000"
+    depends_on:
+      - coordinador
+    networks:
+      - puerto-net
+
+  barco3:
+    build:
+      context: .
+      dockerfile: Dockerfile.barco
+    container_name: barco-3
+    environment:
+      BOAT_ID: "3"
+      COORDINATOR_HOST: "coordinador"
+      COORDINATOR_PORT: "5000"
+    depends_on:
+      - coordinador
+    networks:
+      - puerto-net
+
+networks:
+  puerto-net:
+    driver: bridge

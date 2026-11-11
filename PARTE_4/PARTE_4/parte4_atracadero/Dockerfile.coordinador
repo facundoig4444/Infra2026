@@ -1,0 +1,13 @@
+FROM debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends gnat \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY src/coordinador.adb .
+RUN gnatmake -O2 coordinador.adb
+
+ENV COORDINATOR_PORT=5000
+EXPOSE 5000
+CMD ["./coordinador"]
